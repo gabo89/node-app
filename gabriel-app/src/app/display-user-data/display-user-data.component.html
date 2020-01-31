@@ -1,0 +1,54 @@
+<legend>User Information</legend>
+<form  style="border-style: dashed; background:white" class="container" [formGroup]="dataForm" (ngSubmit)="onSubmit_change()">
+
+<div class="form-group row" [ngClass]="{ 'has-error': invalidFirstName() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="first_name" class="control-label">First Name</label>
+		<input type="text" formControlName="first_name" class="form-control" id="first_name" name="first_name" placeholder="first_name">
+		<p *ngIf="invalidFirstName()" id="first_name_error" class="help-block" > {{ this.service_errors.first_name || 'Invalid first name.'}}</p>
+	</div>
+	</div>
+
+<div class="form-group row" [ngClass]="{ 'has-error': invalidLastName() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="last_name" class="control-label">Last Name</label>
+		<input type="text" formControlName="last_name" class="form-control" id="last_name" name="last_name" placeholder="last_name">
+		<p *ngIf="invalidLastName()" id="last_name_error" class="help-block">  {{this.service_errors.last_name || 'Invalid last name.' }}</p>
+	</div>
+	</div>
+
+<div class="form-group row" [ngClass]="{ 'has-error': invalidEmail() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="email" class="control-label">E-mail</label>
+		<input type="text" formControlName="email" class="form-control" id="email" name="email" placeholder="email">
+			<p *ngIf="invalidEmail()" id="email_error" class="help-block"> {{ this.service_errors.email || 'Invalid email address.' }}</p>
+	</div>
+	</div>
+	
+<div class="form-group row" [ngClass]="{ 'has-error': invalidZipcode() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="zipcode" class="control-label">Zip code</label>
+		<input type="text" formControlName="zipcode" class="form-control" id="zipcode" name="zipcode" placeholder="zipcode">
+			<p *ngIf="invalidZipcode()" id="zipcode_error" class="help-block">{{this.service_errors.zipcode || 'Invalid zip code.'}}</p>
+	</div>
+</div>
+
+<div class="form-group row" [ngClass]="{ 'has-error': invalidPassword() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="password" class="control-label">Password</label>
+		<input type="text" formControlName="password" class="form-control" id="password" name="password" placeholder="password">
+		<p *ngIf="invalidPassword()" id="password_error" class="help-block">{{this.service_errors.password || 'Invalid password.'}}</p>
+	</div>
+</div>
+
+<div class="row"> <!-- Register Button -->
+	<div class="col-lg-6 form-group has-error">
+		<button type="submit" style="width:100%" class="btn btn-primary">Update</button>
+	</div>
+		
+	<div class="col-lg-6">
+		<a routerLink="/"> <button  style="width:100%"class="btn btn-primary"> <= Main Page</button></a>
+	</div>
+	</div>
+
+</form>	

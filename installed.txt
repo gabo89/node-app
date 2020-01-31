@@ -1,0 +1,52 @@
+
+procedure
+
+make dir, goto dir
+npm init
+
+-------------------------------------
+npm install -g @angular/cli --save
+npm install mongodb --save
+npm install nodemon --save
+npm install express --save
+npm install --save bootstrap@4
+
+
+
+-------------------------------------
+
+new angular 8 project
+-------------------------------------
+ng new charts8
+-------------------------------------
+go into chart8 folder and execute npm start
+
+create new project outside other project 
+-------------------------------------
+ng new angular-node-express
+cd angular-node-express
+-------------------------------------
+
+generate component for angular 
+
+ng generate component input-user-data-form --spec false
+ng generate component display-user-data --spec false
+ng generate component login-form --spec false
+ng generate component index-form --spec false
+ng generate component recover-form --spec false
+ng generate component recover-form-success --spec false
+
+generate express api endpoint
+-------------------------------------
+npm install -g express-generator-api
+express-api angular-node-express-api 
+ cd angular-node-express-api
+npm install
+
+
+generate random uid
+-------------------------------------
+npm install uid-safe  --save
+npm install fastest-validator --save
+npm install mongoose --save
+npm install nodemon --save

@@ -1,0 +1,49 @@
+
+<form style="border-style: dashed; background:white" class="text-center container session-error" [formGroup]="loginForm" (ngSubmit)="onSubmit_login()">
+
+	<div class="form-group row" [ngClass]="{ 'has-error': invalidUsername() }"> <!-- First Name -->
+	<div class="col-lg-12">
+		<label for="username" class="control-label">Username</label>
+		<input type="text" [ngClass]="{'red-border-class': invalidUsername()}" formControlName="username" class="form-control" id="username" name="username" placeholder="email@gmail.com">
+		<div *ngIf="invalidUsername()" id="email_error" class="help-block"> {{ this.service_errors.username || 'Invalid username.' }}</div>
+	</div>
+	</div>
+
+	<div class="form-group row" [ngClass]="{ 'has-error': invalidloginpassword() }"> <!-- Last Name -->
+	<div class="col-lg-12">
+		<label for="password" class="control-label">Password</label>
+		<input type="text" [ngClass]="{'red-border-class': invalidUsername()}" formControlName="password" class="form-control" id="password" name="password" placeholder="Password">
+		<p *ngIf="invalidloginpassword()" id="password_error" class="help-block"> {{ this.service_errors.password  || 'Invalid password.'}}</p>
+	</div>
+	</div>
+	
+	
+	
+	<div class="form-group row" > <!-- Register Button -->
+	<div class="col-lg-12">
+		<label for="selection" class="control-label" >Keep me logged </label>
+		<input  type="checkbox" formControlName="selection" class="form-control" id="selection" name="selection" [checked]="true" >
+		<p *ngIf="invalidsession()" id="session_error" class="help-block"> Session Timeout</p>
+	</div>
+	
+	
+	<div class="form-group has-error col-lg-6">
+		<button type="submit"  style="width:100%" class="btn btn-primary">Login</button>
+	</div>
+	<div class="col-lg-6">
+		<a routerLink="/register"> <button style="width:100%"  class="btn btn-primary"> Register  </button></a>
+	</div>
+	</div>
+	<div class="row ">
+	<div class="col-lg-12 ">
+		<a routerLink="/recover"> <button style="width:100%" class="btn btn-primary">Recover password</button></a>
+	</div>
+	</div>
+	<div class="row ">
+	<div class="col-lg-12">
+	<p>Smart 2019™</p>
+	</div>
+	</div>
+</form>	
+
+	

@@ -1,0 +1,76 @@
+
+ <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" [ngClass]="{ 'active': navbarOpen }">
+     <table>
+	<tr>
+    <td>        <div class="sidebar-header">
+                <h3>Smart System</h3>
+            </div>
+       <ul class="list-unstyled components">
+                <p>Welcome </p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+		</td>
+		<td>
+		 <div class="container-fluid">
+
+					  <button type="button" id="sidebarCollapse" (click)="toggleNavbar()" class="navbar-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					  </button>
+				
+
+				
+                </div>
+		</td>
+		</tr>
+		</table>
+        </nav>
+
+        <!-- Page Content  -->
+        <div  >
+
+       
+		</div>
+    </div>
+	
+
+ 
