@@ -11,6 +11,10 @@ npm install nodemon --save
 npm install express --save
 npm install --save bootstrap@4
 
+---------------------------------------
+updater to latest angular proyect
+
+npm install -g @angular/cli@next 
 
 
 -------------------------------------
