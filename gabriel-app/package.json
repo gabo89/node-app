@@ -23,7 +23,7 @@
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "fastest-validator": "^0.6.19",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ngx-cookie-service": "^2.2.0",
     "popper.js": "^1.16.1",
